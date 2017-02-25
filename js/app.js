@@ -112,6 +112,15 @@ submit.addEventListener("click", (event) => {
           PHONE.innerHTML = err;
            })
         } 
+        if (nameField.classList.contains('isValid')) {
+          NAME.innerHTML = '';
+        }
+        if (emailField.classList.contains('isValid')) {
+          EMAIL.innerHTML = '';
+        }
+        if (passField.classList.contains('isValid')) {
+          PASSWORD.innerHTML = '';
+        }
         if (nameField.checkValidity()  && emailField.checkValidity()  &&  passField.checkValidity() && phoneField.checkValidity() ) {
             // Replace Dom with success text
             document.querySelector('section:first-child').innerHTML = successText;
