@@ -1,0 +1,2 @@
+# Validation Form
+This project uses Javascript and HTML to validate forms. It's super basic. It adds regex in the HTML to help validate but on top of that it's also doing validation with Javascript. It's got some nice, subtle animations that help the user know there entry was invalid.

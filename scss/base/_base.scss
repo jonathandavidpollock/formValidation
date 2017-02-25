@@ -1,0 +1,226 @@
+header {
+	background-color:#515151;
+	padding:2rem;
+}
+
+.wrapper {
+	margin:2rem;
+}
+
+.container {
+	max-width: 95%;
+    	margin: auto;
+}
+
+.error {
+	line-height:1rem;
+}
+
+header, section {
+	margin-bottom:2.2rem;
+}
+
+section:first-child {
+	animation: fadeInLeft 1.6s 1;
+}
+section:last-child {
+	animation:fadeInRight 1.6s 1;
+}
+
+input:invalid {
+	animation: shake .6s linear;
+}
+
+input:valid {
+	border-color:$green;
+}
+
+button {
+	font-weight: bold;
+	margin-top:3rem;
+	width:100%;
+	background-color:$blue;
+	color:$white;
+	border-radius:$bRadius;
+	padding:1rem;
+	max-width:470px;
+	transition:.25s;
+	transition-timing-function: ease-out;
+	&:active {
+		background-color:$darkBlue;
+	}
+	&:hover {
+		transform: scale(1.025);
+	}
+}
+
+a:hover, button:hover {
+	cursor:pointer;
+}
+
+.success {
+	display:flex;
+	justify-content:center;
+	background-image: url('../assets/circle-check.svg');
+	background-size: 50px;
+}
+
+form {
+	padding:1rem;
+	background-color:$light-grey;
+	max-width:640px;
+	p {
+		padding-bottom:1rem;
+		label {
+			display:block;
+		}
+	}
+	p:last-child {
+		margin:auto;
+		display:flex;
+		justify-content: center;
+	}
+	select {
+	border:none;
+	background: url('../assets/down-chevron.svg') no-repeat 98% center;
+	background-size:2rem;
+	appearance:none;
+	}
+	input, select {
+		font-size: 1.4rem;
+		padding: 1rem;
+		border-radius:$bRadius;
+		background-color:$medium-grey;
+		width:100%;
+		border:2px solid transparent;
+		transition: .25s;
+		outline: none;
+		&:focus {
+			border-color:$blue;
+		}
+	}
+}
+
+.contactInfo {
+	font-size:2rem;
+	background-color:$blue;
+	max-width:640px;
+	color:$white;
+	padding:2rem;
+	p:first-child {
+		margin-bottom: 2rem;
+	}
+	p:not(:first-child) {
+		line-height: 3.3rem;
+		background-position-y: center;
+	}
+	.phoneNumber {
+		background-image: url('../assets/phone.svg');
+		background-size: 10px;    
+		background-position-x: 2px;
+	}
+	.emailAddress {
+		background-image: url('../assets/email.svg');
+		background-size: 20px;
+	}
+	.phoneNumber, .emailAddress {
+		text-indent: 25px;
+		background-repeat: no-repeat;
+	}
+}
+
+label span, .error {
+	font-size:50%;
+	opacity:.5;
+}
+
+@include mq(medium) {
+	.wrapper, h1 {
+		max-width:1100px;
+		margin:auto;
+	}
+	form {
+		padding-bottom:8rem;
+		padding-top:2rem;
+	}
+	section {
+		margin:2rem;
+	}
+	section:first-child {
+		flex:2;
+	}
+	section:last-child {
+		flex:1;
+	}
+	.wrapper {
+		display:flex;
+		justify-content:center;
+	}
+}
+
+@include mq(large) {
+	h1 {
+		padding-left:2rem;
+	}
+	.error {
+		float: right;
+    		width: 20%;
+    		margin-right: 100px;
+	}
+	form input, form select, form button {
+		width:60%;
+	}
+	form p:last-child {
+		display:block;
+	}
+	form span {
+
+		line-height:1rem;
+	}
+}
+
+@keyframes fadeInLeft {
+   0% {
+      opacity: 0;
+      transform: translateX(-20px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateX(0);
+   }
+}   
+
+@keyframes fadeInRight {
+   0% {
+      opacity: 0;
+      transform: translateX(20px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateX(0);
+   }
+}   
+
+@-webkit-keyframes shake {
+    0% {
+        left:-10px;
+    }
+    16% {
+        left:9px;
+    }
+    33% {
+        left:-6px;
+    }
+    50% {
+        left:5px;
+    }
+    66% {
+        left:-2px;
+    }
+    83% {
+        left:1px;
+    }
+    100% {
+        left: 0px;
+    }
+}

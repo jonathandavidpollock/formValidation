@@ -1,0 +1,259 @@
+/* CSS RESET
+==================================================================================================== 
+====================================================================================================
+*/
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,700");
+html, body, div, main, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, button,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, input, textarea,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video,
+::before, ::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  box-sizing: border-box; }
+
+/* HTML5 - Older browser support
+====================================================================== */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+/* BODY
+====================================================================== */
+body {
+  line-height: 1; }
+
+/* LISTS - Clear bullets
+====================================================================== */
+ol, ul {
+  list-style: none; }
+
+/* QUOTES
+====================================================================== */
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* TABLES
+====================================================================== */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: 'bebas_neueregular';
+  src: url("../assets/fonts/bebasneue-webfont.woff2") format("woff2"), url("../assets/fonts/bebasneue-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+h1, h2, h3,
+h4, h5, h6 {
+  font-family: 'bebas_neueregular', sans-serif;
+  text-transform: uppercase; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font: 1.6rem/1.25 "PT Sans", sans-serif;
+  color: #131313; }
+
+h1 {
+  font-size: 3.2rem;
+  color: #fff;
+  line-height: 2.6rem; }
+
+h2 {
+  font-size: 2.4rem;
+  line-height: 4rem;
+  color: #515151; }
+
+a {
+  text-decoration: underline;
+  color: #fff; }
+  a:focus {
+    border: 2px solid #fff; }
+
+header {
+  background-color: #515151;
+  padding: 2rem; }
+
+.wrapper {
+  margin: 2rem; }
+
+.container {
+  max-width: 95%;
+  margin: auto; }
+
+.error {
+  line-height: 1rem; }
+
+header, section {
+  margin-bottom: 2.2rem; }
+
+section:first-child {
+  animation: fadeInLeft 1.6s 1; }
+
+section:last-child {
+  animation: fadeInRight 1.6s 1; }
+
+input:invalid {
+  animation: shake .6s linear; }
+
+input:valid {
+  border-color: #09BC8A; }
+
+button {
+  font-weight: bold;
+  margin-top: 3rem;
+  width: 100%;
+  background-color: #4C8DE2;
+  color: #fff;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  max-width: 470px;
+  transition: .25s;
+  transition-timing-function: ease-out; }
+  button:active {
+    background-color: #2371d8; }
+  button:hover {
+    transform: scale(1.025); }
+
+a:hover, button:hover {
+  cursor: pointer; }
+
+.success {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  background-image: url("../assets/circle-check.svg");
+  background-size: 50px; }
+
+form {
+  padding: 1rem;
+  background-color: #F7F7F7;
+  max-width: 640px; }
+  form p {
+    padding-bottom: 1rem; }
+    form p label {
+      display: block; }
+  form p:last-child {
+    margin: auto;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center; }
+  form select {
+    border: none;
+    background: url("../assets/down-chevron.svg") no-repeat 98% center;
+    background-size: 2rem;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none; }
+  form input, form select {
+    font-size: 1.4rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: #E0E0E0;
+    width: 100%;
+    border: 2px solid transparent;
+    transition: .25s;
+    outline: none; }
+    form input:focus, form select:focus {
+      border-color: #4C8DE2; }
+
+.contactInfo {
+  font-size: 2rem;
+  background-color: #4C8DE2;
+  max-width: 640px;
+  color: #fff;
+  padding: 2rem; }
+  .contactInfo p:first-child {
+    margin-bottom: 2rem; }
+  .contactInfo p:not(:first-child) {
+    line-height: 3.3rem;
+    background-position-y: center; }
+  .contactInfo .phoneNumber {
+    background-image: url("../assets/phone.svg");
+    background-size: 10px;
+    background-position-x: 2px; }
+  .contactInfo .emailAddress {
+    background-image: url("../assets/email.svg");
+    background-size: 20px; }
+  .contactInfo .phoneNumber, .contactInfo .emailAddress {
+    text-indent: 25px;
+    background-repeat: no-repeat; }
+
+label span, .error {
+  font-size: 50%;
+  opacity: .5; }
+
+@media screen and (min-width: 700px) {
+  .wrapper, h1 {
+    max-width: 1100px;
+    margin: auto; }
+  form {
+    padding-bottom: 8rem;
+    padding-top: 2rem; }
+  section {
+    margin: 2rem; }
+  section:first-child {
+    -ms-flex: 2;
+        flex: 2; }
+  section:last-child {
+    -ms-flex: 1;
+        flex: 1; }
+  .wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center; } }
+
+@media screen and (min-width: 1100px) {
+  h1 {
+    padding-left: 2rem; }
+  .error {
+    float: right;
+    width: 20%;
+    margin-right: 100px; }
+  form input, form select, form button {
+    width: 60%; }
+  form p:last-child {
+    display: block; }
+  form span {
+    line-height: 1rem; } }
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }

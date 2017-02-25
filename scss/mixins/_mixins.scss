@@ -1,0 +1,24 @@
+// Mixins
+
+@mixin brs ($topleft, $topRight, $bottomLeft, $bottomRight) {
+	border-top-left-radius: $topleft;
+	border-top-right-radius: $topRight;
+	border-bottom-left-radius: $bottomLeft;
+	border-bottom-right-radius: $bottomRight;
+}
+
+@mixin mq($size) {
+	@if $size == medium {
+		@media screen and (min-width: 700px){ @content;}
+	}
+	@if $size == large {
+		@media screen and (min-width: 1100px) {@content;}
+	}
+}
+
+@mixin headings {
+    h1, h2, h3,
+    h4, h5, h6 {
+        @content;
+    }
+}
