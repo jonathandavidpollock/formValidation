@@ -1,6 +1,6 @@
 let requiredText = '<span> required</span>';
 let successText = '<h2 class="success" aria-live="polite">Awesome! You\'re registered.</h2>';
-let strongRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
+let passRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
 let emailRegex = new RegExp('/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/');
 let nameRegex = new RegExp("/^[a-z ,.'-]+$/i");
 let numRegex = new RegExp("/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im");
@@ -36,10 +36,10 @@ class CheckValidity {
     this.type = type;
     this.errors = [];
 
-    if (!this.input.checkValidity()) {
+    if (!this.input.checkValidity() && this.input.hasAttribute("required")) {
       this.input.className = "notValid";
     }
-    else {
+    if (this.input.checkValidity() && this.input.hasAttribute("required")) {
       this.input.className = "isValid";
     }
   }
@@ -55,10 +55,10 @@ class CheckValidity {
       }
 
       if (this.type == "number" && !this.input.value.match(numRegex)) {
-      this.addError('Please enter a valid phone number.');
+      this.addError('Please use this format: 555-555-5555');
       }
     
-      if (this.type == "password" && !this.input.value.match(strongRegex)) {
+      if (this.type == "password" && !this.input.value.match(passRegex)) {
       this.addError(passwordError);
        }
 
