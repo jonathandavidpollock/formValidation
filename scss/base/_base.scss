@@ -27,7 +27,7 @@ section:last-child {
 	animation:fadeInRight 1.6s 1;
 }
 
-input:valid, select:valid {
+.isValid {
 	border-color:$green;
 }
 
@@ -185,6 +185,9 @@ label span, .error {
 	form span {
 
 		line-height:1rem;
+	}
+	.success {
+		margin-top:10rem;
 	}
 }
 

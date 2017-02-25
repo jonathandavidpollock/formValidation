@@ -116,7 +116,7 @@ section:first-child {
 section:last-child {
   animation: fadeInRight 1.6s 1; }
 
-input:valid, select:valid {
+.isValid {
   border-color: #09BC8A; }
 
 .notValid {
@@ -251,7 +251,9 @@ label span, .error {
   form p:last-child {
     display: block; }
   form span {
-    line-height: 1rem; } }
+    line-height: 1rem; }
+  .success {
+    margin-top: 10rem; } }
 
 @keyframes fadeInLeft {
   0% {

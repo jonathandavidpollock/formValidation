@@ -32,7 +32,7 @@
 			</p>
 			<p>
 				<label for="number">Phone</label>
-				<input type="tel" name="number" id="number" pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$">
+				<input type="tel" name="number" id="number" pattern="/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im">
 				<span class="error PHONE"></span>
 			</p>
 			<p>
