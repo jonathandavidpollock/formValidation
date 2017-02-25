@@ -3,7 +3,7 @@ let successText = '<h2 class="success" aria-live="polite">Awesome! You\'re regis
 let passRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
 let emailRegex = new RegExp('/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/');
 let nameRegex = new RegExp("/^[a-z ,.'-]+$/i");
-let numRegex = new RegExp("/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im");
+let numRegex = new RegExp("((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}");
 
 
 let passwordError = 'Minimum 8 characters at least 1 Uppercase Alphabet, 1 Lowercase Alphabet and 1 Number.';

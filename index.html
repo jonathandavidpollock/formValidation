@@ -7,7 +7,7 @@
 	<title>Registration Form</title>
 </head>
 <body>
-	<header role="banner">
+	<header>
 		<h1>Super Valid Registration Form</h1>
 	</header>
 	<div class="wrapper">
@@ -32,7 +32,7 @@
 			</p>
 			<p>
 				<label for="number">Phone</label>
-				<input type="tel" name="number" id="number" pattern="/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im">
+				<input type="tel" name="number" id="number" pattern="((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}">
 				<span class="error PHONE"></span>
 			</p>
 			<p>
