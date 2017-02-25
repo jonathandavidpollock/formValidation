@@ -112,8 +112,7 @@ submit.addEventListener("click", (event) => {
           PHONE.innerHTML = err;
            })
         } 
-        if (nameMessages.length < 1 && emailMessages.length < 1 &&  passwordMessages.length < 1 &&
-           phoneMessages.length < 1 ) {
+        if (nameField.checkValidity()  && emailField.checkValidity()  &&  passField.checkValidity() < phoneField.checkValidity() ) {
             // Replace Dom with success text
             document.querySelector('section:first-child').innerHTML = successText;
         }
