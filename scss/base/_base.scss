@@ -31,7 +31,7 @@ input:invalid {
 	animation: shake .6s linear;
 }
 
-input:valid {
+input:valid, select:valid {
 	border-color:$green;
 }
 

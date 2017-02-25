@@ -42,6 +42,10 @@ class CheckValidity {
   
   getMessages() {
 
+      if (this.input.value.match()) {
+        this.addError('Please enter a valid value.');
+      }
+
       if (this.type == "name" && !this.input.value.match(nameRegex)) {
       this.addError('Name can only contain letters.');
       }

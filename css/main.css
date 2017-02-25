@@ -119,7 +119,7 @@ section:last-child {
 input:invalid {
   animation: shake .6s linear; }
 
-input:valid {
+input:valid, select:valid {
   border-color: #09BC8A; }
 
 button {
