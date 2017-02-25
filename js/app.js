@@ -1,5 +1,5 @@
 let requiredText = '<span> required</span>';
-let successText = '<h2 class="success">Awesome! You\'re registered.</h2>';
+let successText = '<h2 class="success" aria-live="polite">Awesome! You\'re registered.</h2>';
 let strongRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
 let emailRegex = new RegExp('/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/');
 let nameRegex = new RegExp("/^[a-z ,.'-]+$/i");
@@ -112,7 +112,7 @@ submit.addEventListener("click", (event) => {
           PHONE.innerHTML = err;
            })
         } 
-        if (nameField.checkValidity()  && emailField.checkValidity()  &&  passField.checkValidity() < phoneField.checkValidity() ) {
+        if (nameField.checkValidity()  && emailField.checkValidity()  &&  passField.checkValidity() && phoneField.checkValidity() ) {
             // Replace Dom with success text
             document.querySelector('section:first-child').innerHTML = successText;
         }
