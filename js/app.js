@@ -12,10 +12,10 @@ let emailError = 'Please enter a valid email.';
 let requiredFields = document.querySelectorAll('[required]');
 let submit = document.querySelector('button');
 
-let nameField = document.querySelector([name="name"]);
-let emailField = document.querySelector([name="email"]);
-let passField = document.querySelector([name="password"]);
-let phoneField = document.querySelector([name="phone"]);
+let nameField = document.querySelector('#name');
+let emailField = document.querySelector('#email');
+let passField = document.querySelector('#password');
+let phoneField = document.querySelector('#number');
 
 let NAME = document.querySelector('.NAME');
 let EMAIL = document.querySelector('.EMAIL');
