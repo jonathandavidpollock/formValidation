@@ -33,8 +33,10 @@ h2 {
 }
 
 a {
-  text-decoration: underline;
   color:$white;
+  &:hover {
+    text-decoration: underline;
+  }
   &:focus {
     border:2px solid $white;
   }
