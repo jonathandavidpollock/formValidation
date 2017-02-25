@@ -27,12 +27,16 @@ section:last-child {
 	animation:fadeInRight 1.6s 1;
 }
 
-input:invalid {
-	animation: shake .6s linear;
-}
-
 input:valid, select:valid {
 	border-color:$green;
+}
+
+.notValid {
+	 animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  	transform: translate3d(0, 0, 0);
+  	backface-visibility: hidden;
+  	perspective: 1000px;
+	border-color:$red;
 }
 
 button {
@@ -201,26 +205,20 @@ label span, .error {
    }
 }   
 
-@-webkit-keyframes shake {
-    0% {
-        left:-10px;
-    }
-    16% {
-        left:9px;
-    }
-    33% {
-        left:-6px;
-    }
-    50% {
-        left:5px;
-    }
-    66% {
-        left:-2px;
-    }
-    83% {
-        left:1px;
-    }
-    100% {
-        left: 0px;
-    }
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }

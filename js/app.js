@@ -34,6 +34,10 @@ class CheckValidity {
     this.input = input;
     this.type = type;
     this.errors = [];
+
+    if (!this.input.checkValidity()) {
+      this.input.className = "notValid";
+    }
   }
   
   addError(message) {
@@ -42,7 +46,7 @@ class CheckValidity {
   
   getMessages() {
 
-      if (this.input.value.match()) {
+      if (this.input.value.match('')) {
         this.addError('Please enter a valid value.');
       }
 
