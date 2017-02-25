@@ -36,10 +36,10 @@ class CheckValidity {
     this.type = type;
     this.errors = [];
 
-    if (!this.input.checkValidity() && this.input.hasAttribute("required")) {
-      this.input.className = "notValid";
+    if (!this.input.checkValidity()) {
+      this.input.className = "notValid";  
     }
-    if (this.input.checkValidity() && this.input.hasAttribute("required")) {
+    if (this.input.checkValidity()) {
       this.input.className = "isValid";
     }
   }
@@ -54,7 +54,7 @@ class CheckValidity {
       this.addError('Name can only contain letters.');
       }
 
-      if (this.type == "number" && !this.input.value.match(numRegex)) {
+      if (this.type == "tel" && !this.input.value.match(numRegex)) {
       this.addError('Please use this format: 555-555-5555');
       }
     
@@ -85,7 +85,7 @@ submit.addEventListener("click", (event) => {
       let validateName = new CheckValidity(nameField, "name");
   	let validatePassword = new CheckValidity(passField, "password");
       let validateEmail = new CheckValidity(emailField, "email");
-      let validatePhone = new CheckValidity(phoneField, "phone");
+      let validatePhone = new CheckValidity(phoneField, "tel");
 
       let nameMessages = validateName.getMessages();
   	let passwordMessages = validatePassword.getMessages();
